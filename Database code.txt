@@ -1,0 +1,7 @@
+create database foodPlaza;
+use database foodplaza;
+create table food(FoodId int primary key not null auto_increment,FoodName varchar(100),FoodType varchar(100),FoodCategory varchar(100),FoodDescription varchar(100),Price double);
+create table customer(CustId int not null primary key auto_increment,CustName varchar(50),CustEmail varchar(50),CustPassword varchar(50),CustAddress varchar(50),Contact_NO varchar(50));
+create table cart(CartId int not null primary key auto_increment,FoodId int,FoodName varchar(50),Quantity int,Email varchar(50),Price double);
+create table admin(adminId int not null primary key auto_increment,adminName varchar(50),adminEmail varchar(50),adminPassword varchar(50),adminAddress varchar(50),adminContact varchar(50));
+create table foodorder(OrderId int not null primary key auto_increment,Email varchar(100),Date date,Total_Bill double,FoodName varchar(50));
